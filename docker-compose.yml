@@ -1,0 +1,20 @@
+version: "3"
+
+services: 
+    web:
+        container_name: api-rest-vehiculo
+        restart: always
+        build: .
+        ports: 
+            - "5000:3000"
+        links: 
+            - mongoVehiculo
+        volumes: 
+            - .:/usr/src/app
+    mongoVehiculo:
+        container_name: mongovehiculo
+        image: mongo
+        ports: 
+            - "27019:27017"
+        logging: 
+            driver: none
