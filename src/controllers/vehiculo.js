@@ -37,7 +37,7 @@ function saveVehiculo(req, res) {
       seccion: "Vehículos",
       modelo: vehiculoStored.modelo,
       categoria: vehiculoStored.category,
-      precio: vehiculoStored.price,
+      precio: vehiculoStored.price
     };
     res.status(200).send({ product: vehiculoStored });
     const sms = JSON.stringify(vehiculoStored.modelo);
